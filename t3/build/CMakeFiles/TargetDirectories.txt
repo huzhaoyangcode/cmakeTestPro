@@ -1,0 +1,6 @@
+/home/hzy/cmakeTestPro/t3/build/CMakeFiles/edit_cache.dir
+/home/hzy/cmakeTestPro/t3/build/CMakeFiles/rebuild_cache.dir
+/home/hzy/cmakeTestPro/t3/build/lib/CMakeFiles/edit_cache.dir
+/home/hzy/cmakeTestPro/t3/build/lib/CMakeFiles/rebuild_cache.dir
+/home/hzy/cmakeTestPro/t3/build/lib/CMakeFiles/hello_static.dir
+/home/hzy/cmakeTestPro/t3/build/lib/CMakeFiles/hello.dir
