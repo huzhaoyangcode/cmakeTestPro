@@ -1,0 +1,4 @@
+/home/hu/myGitHub/cmakeTestPro/install/share/doc/cmake/t2/COPYRIGHT
+/home/hu/myGitHub/cmakeTestPro/install/share/doc/cmake/t2/README
+/home/hu/myGitHub/cmakeTestPro/install/bin/runHello.sh
+/home/hu/myGitHub/cmakeTestPro/install/test/doc/hello.txt
