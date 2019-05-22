@@ -64,6 +64,69 @@
 的相对路径，默认是/usr/local/
 5.<prefix>可以通过DCMAKE_INSTALL_PREFIX指定
 
+### install(TARGETS targets... [EXPORT <export-name>]
+        [[ARCHIVE|LIBRARY|RUNTIME|OBJECTS|FRAMEWORK|BUNDLE|
+          PRIVATE_HEADER|PUBLIC_HEADER|RESOURCE]
+         [DESTINATION <dir>]
+         [PERMISSIONS permissions...]
+         [CONFIGURATIONS [Debug|Release|...]]
+         [COMPONENT <component>]
+         [NAMELINK_COMPONENT <component>]
+         [OPTIONAL] [EXCLUDE_FROM_ALL]
+         [NAMELINK_ONLY|NAMELINK_SKIP]
+        ] [...]
+        [INCLUDES DESTINATION [<dir> ...]]
+        )
+1.此命令用于安装目标文件，静态库，动态库等等
+2.ARCHIVE 表示静态库，LIBRARY 表示动态库，RUNTIME 表示可执行目标文件
+3.DESTINATION 表示安装的文件夹，不以/开头就认为是相对路径
+以/开头就认为是绝对路径，这时候CMAKE_INSTALL_PREFIX就无用了。
+4.例子: install(TARGETS hello libhello libhello_static 
+                RUNTIME DESTINATION bin
+                LIBRARY DESTINATION lib
+                ARCHIVE DESTINATION lib_static)
+
+## add_library(<name> [STATIC | SHARED | MODULE]
+            [EXCLUDE_FROM_ALL]
+            [source1] [source2 ...])
+1.此命令用于生成静态库或动态库。
+2.name没必要写全名字，如libhello.so，我们只需要写hello就可以了，
+cmake 会根据具体的选项生成具体的名字。
+
+## set_target_properties(target1 target2 ...
+                      PROPERTIES prop1 value1
+                      prop2 value2 ...)
+1.此命令用于设置生成的目标文件的属性，可以控制其构建过程。
+2.例如：
+//用于设置生成的目标文件的输出名字
+set_target_properties(hello_static PROPERTIES OUTPUT_NAME "hello")
+//由于cmake在生成target时候会尝试清理其他使用该名字的库，所以若想
+//同时生成相同名字的动态库和静态库，要为target设置属性如下
+set_target_properties(hello PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+set_target_properties(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+//设置动态库的版本号，动态库一般都有版本号，版本号是为了让多个版本
+//共存于同一机器，并且使用链接方式使用不同的版本
+set_target_properties(hello PROPERTIES VERSION 1.2 SOVERSION 1)
+VERSION 代表动态库版本，而SOVERSION 代表API版本。
+这个例子将在生成lib的文件夹中生成
+libhello.so.1.2
+libhello.so.1--->libhello.so.1.2
+libhello.so--->libhello.so.1
+
+## get_target_property(VAR target property)
+1.这个命令用来获得target的属性信息，然后存储到VAR里面
+2.执行过之后就可以${VAR}来获得属性的信息了，没有就会返回 NOTFOUND
+
+## cmake 常用变量
+### CMAKE_BINARY_DIR PROJECT_BINARY_DIR <project-name>_BINARY_DIR
+### CMAKE_SOURCE_DIR PROJECT_SOURCE_DIR <project-name>_SOURCE_DIR
+### CMAKE_CURRENT_SOURCE_DIR 
+### CMAKE_CURRENT_BINARY_DIR 
+### CMAKE_CURRENT_LIST_FILE 
+### CMAKE_CURRENT_LIST_LILE 
+### CMAKE_MODULE_PATH 
+### EXECUTABLE_OUTPUT_PATH LIBRARY_OUTPUT_PATH 
+### PROJECT_NAME
 
 ## 内部构建和外部构建
 内部构建：构建文件夹和代码文件夹是同一个，比较乱

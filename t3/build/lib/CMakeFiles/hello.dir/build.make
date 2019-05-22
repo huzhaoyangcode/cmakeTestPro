@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hzy/cmakeTestPro/t3
+CMAKE_SOURCE_DIR = /home/hu/myGitHub/cmakeTestPro/t3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hzy/cmakeTestPro/t3/build
+CMAKE_BINARY_DIR = /home/hu/myGitHub/cmakeTestPro/t3/build
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/hello.dir/depend.make
@@ -59,16 +59,16 @@ include lib/CMakeFiles/hello.dir/flags.make
 
 lib/CMakeFiles/hello.dir/hello.c.o: lib/CMakeFiles/hello.dir/flags.make
 lib/CMakeFiles/hello.dir/hello.c.o: ../lib/hello.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hzy/cmakeTestPro/t3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/CMakeFiles/hello.dir/hello.c.o"
-	cd /home/hzy/cmakeTestPro/t3/build/lib && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello.dir/hello.c.o   -c /home/hzy/cmakeTestPro/t3/lib/hello.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hu/myGitHub/cmakeTestPro/t3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/CMakeFiles/hello.dir/hello.c.o"
+	cd /home/hu/myGitHub/cmakeTestPro/t3/build/lib && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hello.dir/hello.c.o   -c /home/hu/myGitHub/cmakeTestPro/t3/lib/hello.c
 
 lib/CMakeFiles/hello.dir/hello.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hello.dir/hello.c.i"
-	cd /home/hzy/cmakeTestPro/t3/build/lib && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hzy/cmakeTestPro/t3/lib/hello.c > CMakeFiles/hello.dir/hello.c.i
+	cd /home/hu/myGitHub/cmakeTestPro/t3/build/lib && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hu/myGitHub/cmakeTestPro/t3/lib/hello.c > CMakeFiles/hello.dir/hello.c.i
 
 lib/CMakeFiles/hello.dir/hello.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hello.dir/hello.c.s"
-	cd /home/hzy/cmakeTestPro/t3/build/lib && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hzy/cmakeTestPro/t3/lib/hello.c -o CMakeFiles/hello.dir/hello.c.s
+	cd /home/hu/myGitHub/cmakeTestPro/t3/build/lib && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hu/myGitHub/cmakeTestPro/t3/lib/hello.c -o CMakeFiles/hello.dir/hello.c.s
 
 lib/CMakeFiles/hello.dir/hello.c.o.requires:
 
@@ -91,9 +91,9 @@ hello_EXTERNAL_OBJECTS =
 lib/libhello.so.1.0: lib/CMakeFiles/hello.dir/hello.c.o
 lib/libhello.so.1.0: lib/CMakeFiles/hello.dir/build.make
 lib/libhello.so.1.0: lib/CMakeFiles/hello.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hzy/cmakeTestPro/t3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library libhello.so"
-	cd /home/hzy/cmakeTestPro/t3/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/hzy/cmakeTestPro/t3/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libhello.so.1.0 libhello.so.1 libhello.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hu/myGitHub/cmakeTestPro/t3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library libhello.so"
+	cd /home/hu/myGitHub/cmakeTestPro/t3/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/hu/myGitHub/cmakeTestPro/t3/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libhello.so.1.0 libhello.so.1 libhello.so
 
 lib/libhello.so.1: lib/libhello.so.1.0
 	@$(CMAKE_COMMAND) -E touch_nocreate lib/libhello.so.1
@@ -111,10 +111,10 @@ lib/CMakeFiles/hello.dir/requires: lib/CMakeFiles/hello.dir/hello.c.o.requires
 .PHONY : lib/CMakeFiles/hello.dir/requires
 
 lib/CMakeFiles/hello.dir/clean:
-	cd /home/hzy/cmakeTestPro/t3/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/hello.dir/cmake_clean.cmake
+	cd /home/hu/myGitHub/cmakeTestPro/t3/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/hello.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/hello.dir/clean
 
 lib/CMakeFiles/hello.dir/depend:
-	cd /home/hzy/cmakeTestPro/t3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hzy/cmakeTestPro/t3 /home/hzy/cmakeTestPro/t3/lib /home/hzy/cmakeTestPro/t3/build /home/hzy/cmakeTestPro/t3/build/lib /home/hzy/cmakeTestPro/t3/build/lib/CMakeFiles/hello.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hu/myGitHub/cmakeTestPro/t3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hu/myGitHub/cmakeTestPro/t3 /home/hu/myGitHub/cmakeTestPro/t3/lib /home/hu/myGitHub/cmakeTestPro/t3/build /home/hu/myGitHub/cmakeTestPro/t3/build/lib /home/hu/myGitHub/cmakeTestPro/t3/build/lib/CMakeFiles/hello.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/CMakeFiles/hello.dir/depend
 
